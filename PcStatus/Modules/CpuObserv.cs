@@ -1,14 +1,9 @@
-﻿using LibreHardwareMonitor;
+﻿
 using LibreHardwareMonitor.Hardware;
 using PcInfoSerchProject.PcStatus.Modules.Property;
-using System;
-using System.Collections.Generic;
+
 using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace PcInfoSerchProject.PcStatus.Modules
 {
@@ -182,15 +177,36 @@ namespace PcInfoSerchProject.PcStatus.Modules
             Computer c = new Computer()
             {
                 IsCpuEnabled = true,
-                //IsGpuEnabled = true,
-                //IsMemoryEnabled = true,
-                //IsMotherboardEnabled = true,
-                //IsControllerEnabled = true,
-                //IsNetworkEnabled = true,
-                //IsStorageEnabled = true
+                IsGpuEnabled = true,
+                IsMemoryEnabled = true,
+                IsMotherboardEnabled = true,
+                IsControllerEnabled = true,
+                IsNetworkEnabled = true,
+                IsStorageEnabled = true
             };
             c.Open();
             c.Accept(new UpdateVisitor());
+
+            foreach (IHardware hardware in c.Hardware)
+            {
+                Debug.Write("Hardware:"+ hardware.Name);
+
+                foreach (IHardware subhardware in hardware.SubHardware)
+                {
+                    Console.WriteLine("\tSubhardware: " + subhardware.Name);
+
+                    foreach (ISensor sensor in subhardware.Sensors)
+                    {
+                        Debug.Write("\t\tSensor:"+sensor.Value + ", value:" + sensor.Name );
+                    }
+                }
+
+                foreach (ISensor sensor in hardware.Sensors)
+                {
+                    Debug.Write("\t\tSensor:" + sensor.Value + ", value:" + sensor.Name);
+                }
+            }
+
             StartObserv(c);
         }
 
@@ -237,46 +253,9 @@ namespace PcInfoSerchProject.PcStatus.Modules
         private void Cpu(IHardware h) {
 
 
-        Cpu cpu = new Cpu();
-            foreach (ISensor sensor in h.Sensors) {
-                switch (sensor.SensorType)
-                {
-                    case SensorType.Voltage:
-                        break;
-                    case SensorType.Clock:
-                        break;
-                    case SensorType.Temperature:
-                        if (sensor.Name == "CPU Package")
-                        {
-                            cpu.PackageTemp = sensor.Value.GetValueOrDefault();
-                        }
-                        else {
-                            temperatures.Add(sensor.Value.GetValueOrDefault());
-                        }
-                        break;
-                    case SensorType.Load:
-                        break;
-                    case SensorType.Fan:
-                        break;
-                    case SensorType.Flow:
-                        break;
-                    case SensorType.Control:
-                        break;
-                    case SensorType.Level:
-                        break;
-                    case SensorType.Factor:
-                        break;
-                    case SensorType.Power:
-                        break;
-                    case SensorType.Data:
-                        break;
-                    case SensorType.SmallData:
-                        break;
-                    case SensorType.Throughput:
-                        break;
-                    default:
-                        break;
-                }
+            Cpu cpu = new Cpu();
+            foreach (IHardware subhardware in h.SubHardware) {
+
             }
         }
     }

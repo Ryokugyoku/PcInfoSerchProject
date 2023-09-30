@@ -1,4 +1,6 @@
-﻿using PcInfoSerchProject.PcStatus.Modules.Property;
+﻿using LibreHardwareMonitor;
+using LibreHardwareMonitor.Hardware;
+using PcInfoSerchProject.PcStatus.Modules.Property;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -30,8 +32,13 @@ namespace PcInfoSerchProject.PcStatus.Modules
         public void SnapShot(Object date) {
             List<WmicCpuProperty> cpuPropertyList = getCpuUsagePerProcess();
             GlobalObject.CpuUsagePerProcess.Add((DateTime)date, cpuPropertyList);
+            HwMonitor hmonitor = new HwMonitor();
         }
 
+        /// <summary>
+        ///     プロセスごとのCPU使用率を取得する。_Totalに全体の使用率も格納されている
+        /// </summary>
+        /// <returns></returns>
         private List<WmicCpuProperty> getCpuUsagePerProcess() {
             List<WmicCpuProperty> cpuPropertyList = new List<WmicCpuProperty>();
             String output = getProcessRslt(0);
@@ -115,10 +122,6 @@ namespace PcInfoSerchProject.PcStatus.Modules
 
                 case "PercentUserTime":
                     cpuProperty.PercentUserTime = int.Parse(value);
-                    if (cpuProperty.Name.Equals("_Total"))
-                    {
-                        cpuProperty.TotalUsage = int.Parse(value);
-                    }
                     break;
 
                 default:
@@ -126,6 +129,7 @@ namespace PcInfoSerchProject.PcStatus.Modules
             }
             return cpuProperty;
         }
+
         /// <summary>
         ///     引数をもとにCMDコマンドを実行するためのプロセスを返す
         /// </summary>
@@ -165,5 +169,130 @@ namespace PcInfoSerchProject.PcStatus.Modules
             startProcess.WaitForExit();
             return stream.ReadToEnd(); ;
         }
+    }
+
+    internal class HwMonitor {
+        private List<double> voltages = new List<double>();
+        private List<double> temperatures = new List<double>();
+        private List<double> allCoreProcess = new List<double>();
+        /// <summary>
+        ///     HwMonitorから値を収集する
+        /// </summary>
+        public HwMonitor() {
+            Computer c = new Computer()
+            {
+                IsCpuEnabled = true,
+                //IsGpuEnabled = true,
+                //IsMemoryEnabled = true,
+                //IsMotherboardEnabled = true,
+                //IsControllerEnabled = true,
+                //IsNetworkEnabled = true,
+                //IsStorageEnabled = true
+            };
+            c.Open();
+            c.Accept(new UpdateVisitor());
+            StartObserv(c);
+        }
+
+        /// <summary>
+        ///     各ハードウェアタイプごとに処理を適切に割り振るためのメソッド
+        /// </summary>
+        /// <param name="c">Computer</param>
+        private void StartObserv(Computer c) {
+            foreach (IHardware hardware in c.Hardware)
+            {
+                switch (hardware.HardwareType)
+                {
+                    case HardwareType.Motherboard:
+                    break;
+
+                    case HardwareType.GpuNvidia:
+                        break;
+                    case HardwareType.Cpu:
+                        Cpu(hardware);
+                        break;
+                    case HardwareType.SuperIO:
+                        break;
+                    case HardwareType.GpuAmd:
+                        break;
+                    case HardwareType.GpuIntel:
+                        break;
+                    case HardwareType.Memory:
+                        break;
+                    case HardwareType.Storage:
+                        break;
+                    case HardwareType.Cooler:
+                        break;
+                    case HardwareType.Network:
+                    default:
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
+        ///  Cpu専用の情報を収集するメソッド
+        /// </summary>
+        /// <param name="h"></param>
+        private void Cpu(IHardware h) {
+
+
+        Cpu cpu = new Cpu();
+            foreach (ISensor sensor in h.Sensors) {
+                switch (sensor.SensorType)
+                {
+                    case SensorType.Voltage:
+                        break;
+                    case SensorType.Clock:
+                        break;
+                    case SensorType.Temperature:
+                        if (sensor.Name == "CPU Package")
+                        {
+                            cpu.PackageTemp = sensor.Value.GetValueOrDefault();
+                        }
+                        else {
+                            temperatures.Add(sensor.Value.GetValueOrDefault());
+                        }
+                        break;
+                    case SensorType.Load:
+                        break;
+                    case SensorType.Fan:
+                        break;
+                    case SensorType.Flow:
+                        break;
+                    case SensorType.Control:
+                        break;
+                    case SensorType.Level:
+                        break;
+                    case SensorType.Factor:
+                        break;
+                    case SensorType.Power:
+                        break;
+                    case SensorType.Data:
+                        break;
+                    case SensorType.SmallData:
+                        break;
+                    case SensorType.Throughput:
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+
+    public class UpdateVisitor : IVisitor
+    {
+        public void VisitComputer(IComputer computer)
+        {
+            computer.Traverse(this);
+        }
+        public void VisitHardware(IHardware hardware)
+        {
+            hardware.Update();
+            foreach (IHardware subHardware in hardware.SubHardware) subHardware.Accept(this);
+        }
+        public void VisitSensor(ISensor sensor) { }
+        public void VisitParameter(IParameter parameter) { }
     }
 }

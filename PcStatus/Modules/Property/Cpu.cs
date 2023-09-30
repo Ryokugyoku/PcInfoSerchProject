@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace PcInfoSerchProject.PcStatus.Modules.Property
 {
     /// <summary>
@@ -24,7 +23,6 @@ namespace PcInfoSerchProject.PcStatus.Modules.Property
         ///  論理コアの番号順に並んでいるCPU使用率
         /// </summary>
         private List<double> allCoreProcess = new List<double>();
-        private List<WmicCpuProperty> processUsageList = new List<WmicCpuProperty>();
         private double totalUsage;
         private double packageTemp;
         private double packageVoltage;
@@ -47,14 +45,10 @@ namespace PcInfoSerchProject.PcStatus.Modules.Property
 
         private int percentUserTime;
 
-        private int totalUsage;
-
         public int IDProcess { get { return idProcess; } set { idProcess = value; } }
 
         public String Name { get { return name; } set { name = value; } }
 
         public int PercentUserTime { get { return percentUserTime; } set { percentUserTime = value; } }
-
-        public int TotalUsage { get { return totalUsage; } set { totalUsage = value; } }
     }
 }

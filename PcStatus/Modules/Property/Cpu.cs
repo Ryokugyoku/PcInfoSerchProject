@@ -26,14 +26,15 @@ namespace PcInfoSerchProject.PcStatus.Modules.Property
         private double totalUsage;
         private double packageTemp;
         private double packageVoltage;
-
+        private double maxPackageTemp;
 
         public List<double> Voltages { get { return voltages; } set { voltages = value; } }
         public List<double> Temperatures { get {  return temperatures; } set {  temperatures = value; } }
         public List<double> AllCoreProcess { get { return allCoreProcess;  } set { allCoreProcess = value; }}
-        public double Toltages { get { return totalUsage; } set { totalUsage = value; } }
         public double PackageTemp { get { return packageTemp; }  set { packageTemp = value; } }
         public double PackageVoltage { get {  return packageVoltage; } set { packageVoltage = value; } }
+        public double TotalCpuUsage { get { return totalUsage; } set { totalUsage = value; } }
+        public double MaxPackageTemp {  get { return maxPackageTemp; } set {  maxPackageTemp = value; } }
 
     }
 

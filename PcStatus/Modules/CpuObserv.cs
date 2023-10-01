@@ -169,6 +169,7 @@ namespace PcInfoSerchProject.PcStatus.Modules
     internal class HwMonitor {
         private List<double> voltages = new List<double>();
         private List<double> temperatures = new List<double>();
+        //論理プロセッサーの使用率
         private List<double> allCoreProcess = new List<double>();
         /// <summary>
         ///     HwMonitorから値を収集する
@@ -187,25 +188,25 @@ namespace PcInfoSerchProject.PcStatus.Modules
             c.Open();
             c.Accept(new UpdateVisitor());
 
-            foreach (IHardware hardware in c.Hardware)
-            {
-                Debug.Write("Hardware:"+ hardware.Name);
+            //foreach (IHardware hardware in c.Hardware)
+            //{
+            //    Debug.Write("Hardware:"+ hardware.Name);
 
-                foreach (IHardware subhardware in hardware.SubHardware)
-                {
-                    Console.WriteLine("\tSubhardware: " + subhardware.Name);
+            //    foreach (IHardware subhardware in hardware.SubHardware)
+            //    {
+            //        Console.WriteLine("\tSubhardware: " + subhardware.Name);
 
-                    foreach (ISensor sensor in subhardware.Sensors)
-                    {
-                        Debug.Write("\t\tSensor:"+sensor.Value + ", value:" + sensor.Name );
-                    }
-                }
+            //        foreach (ISensor sensor in subhardware.Sensors)
+            //        {
+            //            Debug.Write("\t\tSensor:"+sensor.Value + ", value:" + sensor.Name );
+            //        }
+            //    }
 
-                foreach (ISensor sensor in hardware.Sensors)
-                {
-                    Debug.Write("\t\tSensor:" + sensor.Value + ", value:" + sensor.Name);
-                }
-            }
+            //    foreach (isensor sensor in hardware.sensors)
+            //    {
+            //        debug.write("\t\tsensor:" + sensor.value + ", value:" + sensor.name);
+            //    }
+            //}
 
             StartObserv(c);
         }
@@ -254,8 +255,51 @@ namespace PcInfoSerchProject.PcStatus.Modules
 
 
             Cpu cpu = new Cpu();
-            foreach (IHardware subhardware in h.SubHardware) {
-
+            foreach (ISensor sensor in h.Sensors)
+            {
+                switch(sensor.SensorType) {
+                    case SensorType.Voltage:
+                        if (sensor.Name.Contains("#"))
+                        {
+                            voltages.Add(sensor.Value.GetValueOrDefault());
+                        }
+                        else {
+                            cpu.PackageVoltage = sensor.Value.GetValueOrDefault();
+                        }
+                        break;
+                    case SensorType.Temperature:
+                        if (sensor.Name.Contains("Package"))
+                        {
+                            cpu.PackageTemp = sensor.Value.GetValueOrDefault();
+                        }
+                        else if (sensor.Name.Contains("Max"))
+                        {
+                            //Cpu全体の観測された温度
+                            cpu.MaxPackageTemp = sensor.Value.GetValueOrDefault();
+                        }
+                        else if (sensor.Name.Contains("TjMax"))
+                        {
+                            //核物理コアの観測された温度
+                        }
+                        else if(sensor.Name.Contains("#"))
+                        {
+                            temperatures.Add(sensor.Value.GetValueOrDefault());
+                        }
+                        break;
+                    case SensorType.Clock: 
+                        break;
+                    case SensorType.Power:
+                        break;
+                    case SensorType.Load:
+                        if (sensor.Name.Contains("Total"))
+                        {
+                            cpu.TotalCpuUsage = sensor.Value.GetValueOrDefault();
+                        } 
+                        else  {
+                            allCoreProcess.Add(sensor.Value.GetValueOrDefault());
+                        }
+                        break;
+                }
             }
         }
     }

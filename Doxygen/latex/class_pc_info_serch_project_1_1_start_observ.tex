@@ -1,0 +1,125 @@
+\doxysection{Pc\+Info\+Serch\+Project.\+Start\+Observ クラス}
+\hypertarget{class_pc_info_serch_project_1_1_start_observ}{}\label{class_pc_info_serch_project_1_1_start_observ}\index{PcInfoSerchProject.StartObserv@{PcInfoSerchProject.StartObserv}}
+
+
+PC監開始  
+
+
+
+
+Pc\+Info\+Serch\+Project.\+Start\+Observ 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{class_pc_info_serch_project_1_1_start_observ__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pc_info_serch_project_1_1_start_observ_a7b9639f57cd8089e7b0fc4eafdb220b2}{Start\+Observ}} ()
+\begin{DoxyCompactList}\small\item\em スナップショット開始　1秒間隔 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pc_info_serch_project_1_1_start_observ_a67a719dfb705878c91292a8761b455c8}{Start\+Observ}} (int sec)
+\begin{DoxyCompactList}\small\item\em スナップショット開始　 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pc_info_serch_project_1_1_start_observ_ad5e7e83023c417cc243c20fa621ef35c}{Snap\+Shot\+Thread}} (Object sec)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+PC監開始 
+
+ \mbox{\hyperlink{_start_observ_8cs_source}{Start\+Observ.\+cs}} の \mbox{\hyperlink{_start_observ_8cs_source_l00010}{10}} 行目に定義があります。
+
+
+
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_pc_info_serch_project_1_1_start_observ_a7b9639f57cd8089e7b0fc4eafdb220b2}\label{class_pc_info_serch_project_1_1_start_observ_a7b9639f57cd8089e7b0fc4eafdb220b2} 
+\index{PcInfoSerchProject.StartObserv@{PcInfoSerchProject.StartObserv}!StartObserv@{StartObserv}}
+\index{StartObserv@{StartObserv}!PcInfoSerchProject.StartObserv@{PcInfoSerchProject.StartObserv}}
+\doxysubsubsection{\texorpdfstring{StartObserv()}{StartObserv()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pc\+Info\+Serch\+Project.\+Start\+Observ.\+Start\+Observ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+スナップショット開始　1秒間隔 
+
+
+
+ \mbox{\hyperlink{_start_observ_8cs_source}{Start\+Observ.\+cs}} の \mbox{\hyperlink{_start_observ_8cs_source_l00015}{15}} 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pc_info_serch_project_1_1_start_observ_a7b9639f57cd8089e7b0fc4eafdb220b2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_pc_info_serch_project_1_1_start_observ_a67a719dfb705878c91292a8761b455c8}\label{class_pc_info_serch_project_1_1_start_observ_a67a719dfb705878c91292a8761b455c8} 
+\index{PcInfoSerchProject.StartObserv@{PcInfoSerchProject.StartObserv}!StartObserv@{StartObserv}}
+\index{StartObserv@{StartObserv}!PcInfoSerchProject.StartObserv@{PcInfoSerchProject.StartObserv}}
+\doxysubsubsection{\texorpdfstring{StartObserv()}{StartObserv()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Pc\+Info\+Serch\+Project.\+Start\+Observ.\+Start\+Observ (\begin{DoxyParamCaption}\item[{int}]{sec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+スナップショット開始　 
+
+
+\begin{DoxyParams}{引数}
+{\em sec} & スナップショット保存間隔：秒数\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//１０秒間隔でスナップショットを収集するとき}}
+\DoxyCodeLine{StartObserv\ obSrv\ =\ \textcolor{keyword}{new}\ StartObserv(10);}
+
+\end{DoxyCode}
+ 
+
+ \mbox{\hyperlink{_start_observ_8cs_source}{Start\+Observ.\+cs}} の \mbox{\hyperlink{_start_observ_8cs_source_l00030}{30}} 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pc_info_serch_project_1_1_start_observ_a67a719dfb705878c91292a8761b455c8_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{関数詳解}
+\Hypertarget{class_pc_info_serch_project_1_1_start_observ_ad5e7e83023c417cc243c20fa621ef35c}\label{class_pc_info_serch_project_1_1_start_observ_ad5e7e83023c417cc243c20fa621ef35c} 
+\index{PcInfoSerchProject.StartObserv@{PcInfoSerchProject.StartObserv}!SnapShotThread@{SnapShotThread}}
+\index{SnapShotThread@{SnapShotThread}!PcInfoSerchProject.StartObserv@{PcInfoSerchProject.StartObserv}}
+\doxysubsubsection{\texorpdfstring{SnapShotThread()}{SnapShotThread()}}
+{\footnotesize\ttfamily void Pc\+Info\+Serch\+Project.\+Start\+Observ.\+Snap\+Shot\+Thread (\begin{DoxyParamCaption}\item[{Object}]{sec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{_start_observ_8cs_source}{Start\+Observ.\+cs}} の \mbox{\hyperlink{_start_observ_8cs_source_l00036}{36}} 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pc_info_serch_project_1_1_start_observ_ad5e7e83023c417cc243c20fa621ef35c_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pc_info_serch_project_1_1_start_observ_ad5e7e83023c417cc243c20fa621ef35c_icgraph}
+\end{center}
+\end{figure}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_start_observ_8cs}{Start\+Observ.\+cs}}\end{DoxyCompactItemize}

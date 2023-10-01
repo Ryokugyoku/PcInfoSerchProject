@@ -7,17 +7,12 @@ using System.Diagnostics;
 
 namespace PcInfoSerchProject.PcStatus.Modules
 {
-    
-    internal class CpuObserv
+
+    /// <summary>
+    ///     Cpu監視用クラス
+    /// </summary>
+    class CpuObserv
     {
-        private IDictionary<DateTime, List<Cpu>> cpuMap = new Dictionary<DateTime, List<Cpu>>();
-        private IDictionary<DateTime, List<WmicCpuProperty>> cpuUsage = new Dictionary<DateTime, List<WmicCpuProperty>>();
-        /// <summary>
-        ///     コンストラクタ・処理なし
-        /// </summary>
-        public CpuObserv() { 
-        
-        }
         /// <summary>
         ///     CPU状態のスナップショットを取得し、グローバルオブジェクトに格納する
         /// </summary>
@@ -26,8 +21,12 @@ namespace PcInfoSerchProject.PcStatus.Modules
         /// </param>
         public void SnapShot(Object date) {
             List<WmicCpuProperty> cpuPropertyList = getCpuUsagePerProcess();
-            GlobalObject.CpuUsagePerProcess.Add((DateTime)date, cpuPropertyList);
-            HwMonitor hmonitor = new HwMonitor();
+            GlobalObject.CpuUsagePerProcessMap.Add((DateTime)date, cpuPropertyList);
+            GlobalObject.NowWmicData = cpuPropertyList;
+            Computer c = new Computer() { 
+                IsCpuEnabled = true
+            };
+            HwMonitor hmonitor = new (c,(DateTime)date);
         }
 
         /// <summary>
@@ -164,158 +163,5 @@ namespace PcInfoSerchProject.PcStatus.Modules
             startProcess.WaitForExit();
             return stream.ReadToEnd(); ;
         }
-    }
-
-    internal class HwMonitor {
-        private List<double> voltages = new List<double>();
-        private List<double> temperatures = new List<double>();
-        //論理プロセッサーの使用率
-        private List<double> allCoreProcess = new List<double>();
-        /// <summary>
-        ///     HwMonitorから値を収集する
-        /// </summary>
-        public HwMonitor() {
-            Computer c = new Computer()
-            {
-                IsCpuEnabled = true,
-                IsGpuEnabled = true,
-                IsMemoryEnabled = true,
-                IsMotherboardEnabled = true,
-                IsControllerEnabled = true,
-                IsNetworkEnabled = true,
-                IsStorageEnabled = true
-            };
-            c.Open();
-            c.Accept(new UpdateVisitor());
-
-            //foreach (IHardware hardware in c.Hardware)
-            //{
-            //    Debug.Write("Hardware:"+ hardware.Name);
-
-            //    foreach (IHardware subhardware in hardware.SubHardware)
-            //    {
-            //        Console.WriteLine("\tSubhardware: " + subhardware.Name);
-
-            //        foreach (ISensor sensor in subhardware.Sensors)
-            //        {
-            //            Debug.Write("\t\tSensor:"+sensor.Value + ", value:" + sensor.Name );
-            //        }
-            //    }
-
-            //    foreach (isensor sensor in hardware.sensors)
-            //    {
-            //        debug.write("\t\tsensor:" + sensor.value + ", value:" + sensor.name);
-            //    }
-            //}
-
-            StartObserv(c);
-        }
-
-        /// <summary>
-        ///     各ハードウェアタイプごとに処理を適切に割り振るためのメソッド
-        /// </summary>
-        /// <param name="c">Computer</param>
-        private void StartObserv(Computer c) {
-            foreach (IHardware hardware in c.Hardware)
-            {
-                switch (hardware.HardwareType)
-                {
-                    case HardwareType.Motherboard:
-                    break;
-
-                    case HardwareType.GpuNvidia:
-                        break;
-                    case HardwareType.Cpu:
-                        Cpu(hardware);
-                        break;
-                    case HardwareType.SuperIO:
-                        break;
-                    case HardwareType.GpuAmd:
-                        break;
-                    case HardwareType.GpuIntel:
-                        break;
-                    case HardwareType.Memory:
-                        break;
-                    case HardwareType.Storage:
-                        break;
-                    case HardwareType.Cooler:
-                        break;
-                    case HardwareType.Network:
-                    default:
-                        break;
-                }
-            }
-        }
-
-        /// <summary>
-        ///  Cpu専用の情報を収集するメソッド
-        /// </summary>
-        /// <param name="h"></param>
-        private void Cpu(IHardware h) {
-
-
-            Cpu cpu = new Cpu();
-            foreach (ISensor sensor in h.Sensors)
-            {
-                switch(sensor.SensorType) {
-                    case SensorType.Voltage:
-                        if (sensor.Name.Contains("#"))
-                        {
-                            voltages.Add(sensor.Value.GetValueOrDefault());
-                        }
-                        else {
-                            cpu.PackageVoltage = sensor.Value.GetValueOrDefault();
-                        }
-                        break;
-                    case SensorType.Temperature:
-                        if (sensor.Name.Contains("Package"))
-                        {
-                            cpu.PackageTemp = sensor.Value.GetValueOrDefault();
-                        }
-                        else if (sensor.Name.Contains("Max"))
-                        {
-                            //Cpu全体の観測された温度
-                            cpu.MaxPackageTemp = sensor.Value.GetValueOrDefault();
-                        }
-                        else if (sensor.Name.Contains("TjMax"))
-                        {
-                            //核物理コアの観測された温度
-                        }
-                        else if(sensor.Name.Contains("#"))
-                        {
-                            temperatures.Add(sensor.Value.GetValueOrDefault());
-                        }
-                        break;
-                    case SensorType.Clock: 
-                        break;
-                    case SensorType.Power:
-                        break;
-                    case SensorType.Load:
-                        if (sensor.Name.Contains("Total"))
-                        {
-                            cpu.TotalCpuUsage = sensor.Value.GetValueOrDefault();
-                        } 
-                        else  {
-                            allCoreProcess.Add(sensor.Value.GetValueOrDefault());
-                        }
-                        break;
-                }
-            }
-        }
-    }
-
-    public class UpdateVisitor : IVisitor
-    {
-        public void VisitComputer(IComputer computer)
-        {
-            computer.Traverse(this);
-        }
-        public void VisitHardware(IHardware hardware)
-        {
-            hardware.Update();
-            foreach (IHardware subHardware in hardware.SubHardware) subHardware.Accept(this);
-        }
-        public void VisitSensor(ISensor sensor) { }
-        public void VisitParameter(IParameter parameter) { }
     }
 }

@@ -1,0 +1,16 @@
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\bin\Release\net6.0\win-x64\PcInfoSerchProject.deps.json
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\bin\Release\net6.0\win-x64\PcInfoSerchProject.runtimeconfig.json
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\bin\Release\net6.0\win-x64\PcInfoSerchProject.dll
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\bin\Release\net6.0\win-x64\PcInfoSerchProject.pdb
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\obj\Release\net6.0\win-x64\PcInfoSerchProject.csproj.AssemblyReference.cache
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\obj\Release\net6.0\win-x64\PcInfoSerchProject.Properties.Resources.resources
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\obj\Release\net6.0\win-x64\PcInfoSerchProject.csproj.GenerateResource.cache
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\obj\Release\net6.0\win-x64\PcInfoSerchProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\obj\Release\net6.0\win-x64\PcInfoSerchProject.AssemblyInfoInputs.cache
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\obj\Release\net6.0\win-x64\PcInfoSerchProject.AssemblyInfo.cs
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\obj\Release\net6.0\win-x64\PcInfoSerchProject.csproj.CoreCompileInputs.cache
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\obj\Release\net6.0\win-x64\PcInfoSerchProject.dll
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\obj\Release\net6.0\win-x64\refint\PcInfoSerchProject.dll
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\obj\Release\net6.0\win-x64\PcInfoSerchProject.pdb
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\obj\Release\net6.0\win-x64\PcInfoSerchProject.genruntimeconfig.cache
+C:\Users\ryokugyoku\source\repos\PcInfoSerchProject\obj\Release\net6.0\win-x64\ref\PcInfoSerchProject.dll

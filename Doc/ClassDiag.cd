@@ -1,2 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="PcInfoSerchProject.PcStatus.Modules.Property.Cpu">
+    <Position X="14.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAFEACABAAAAAAIAAAACAAAQAAAAAAAAQAAAAEAAQ=</HashCode>
+      <FileName>PcStatus\Modules\Property\Cpu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PcInfoSerchProject.PcStatus.Modules.Property.WmicCpuProperty">
+    <Position X="12.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAABAAAAQAAAAEAAACAAAAAgAAAAA=</HashCode>
+      <FileName>PcStatus\Modules\Property\Cpu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PcInfoSerchProject.PcStatus.Modules.Property.Gpu">
+    <Position X="16.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PcStatus\Modules\Property\Gpu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PcInfoSerchProject.PcStatus.Modules.Property.MotherBoard">
+    <Position X="18.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PcStatus\Modules\Property\MotherBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PcInfoSerchProject.PcStatus.Modules.CpuObserv">
+    <Position X="12" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAIAAIAAAAAAAAIgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PcStatus\Modules\CpuObserv.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PcInfoSerchProject.PcStatus.Modules.HwMonitor">
+    <Position X="9.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQgAAAAAAAAAAAAACAAQCAAIA=</HashCode>
+      <FileName>PcStatus\Modules\HwMonitor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PcInfoSerchProject.PcStatus.Modules.UpdateVisitor" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAQAAAAAAAAAAAAgAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PcStatus\Modules\HwMonitor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.468" />
+  </Class>
+  <Font Name="Yu Gothic UI" Size="9" />
+</ClassDiagram>

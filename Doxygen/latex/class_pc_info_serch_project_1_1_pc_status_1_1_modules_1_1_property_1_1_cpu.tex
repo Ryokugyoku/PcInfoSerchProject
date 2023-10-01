@@ -1,0 +1,220 @@
+\doxysection{Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu クラス}
+\hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu}{}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu}\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+
+
+HWMonitorから受け取った\+CPU情報を格納するための構造  
+
+
+
+
+Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{プロパティ}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ double $>$ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a88b7804cc71d0ae2bd88072c4da51bb2}{Voltages}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ double $>$ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_ac455c65cf9915220c6dd705e49922598}{Temperatures}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ double $>$ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a9acdb973ce2da9f7da4020b586ba38b8}{All\+Core\+Process}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_ac1841b3949adf5483975c7ef99ce494e}{Package\+Temp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a97c487b462dc4b483affe397c062c56c}{Package\+Voltage}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a3ea3a17d7b326c3d23b6ff5c472cc3b4}{Total\+Cpu\+Usage}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a72749ee12596602c00e32ebfb8b08926}{Max\+Package\+Temp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ double $>$ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_aa685e108f88abffaed7afd4c0138c83f}{voltages}} = new List$<$double$>$()
+\begin{DoxyCompactList}\small\item\em 　物理コアの番号順に並んでいる電圧 \end{DoxyCompactList}\item 
+List$<$ double $>$ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a793fb77668b979e959218ca83ae75b28}{temperatures}} = new List$<$double$>$()
+\begin{DoxyCompactList}\small\item\em 物理コアの番号順に並んでいる　温度 \end{DoxyCompactList}\item 
+List$<$ double $>$ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_aabd36d3f960bdbc45cbaa03f151bb9f7}{all\+Core\+Process}} = new List$<$double$>$()
+\begin{DoxyCompactList}\small\item\em 論理コアの番号順に並んでいる\+CPU使用率 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a3aac582d19cb024636262729ec832c92}{total\+Usage}}
+\item 
+double \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_af10a161f9876e43492576a570a6ce787}{package\+Temp}}
+\item 
+double \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a2b0e08ba347c7d7c000161aca4667e21}{package\+Voltage}}
+\item 
+double \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_afcaa39c5e8e4e872a4717ebfd8f25107}{max\+Package\+Temp}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+HWMonitorから受け取った\+CPU情報を格納するための構造 
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00012}{12}} 行目に定義があります。
+
+
+
+\doxysubsection{メンバ詳解}
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_aabd36d3f960bdbc45cbaa03f151bb9f7}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_aabd36d3f960bdbc45cbaa03f151bb9f7} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!allCoreProcess@{allCoreProcess}}
+\index{allCoreProcess@{allCoreProcess}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{allCoreProcess}{allCoreProcess}}
+{\footnotesize\ttfamily List$<$double$>$ Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+all\+Core\+Process = new List$<$double$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+論理コアの番号順に並んでいる\+CPU使用率 
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00025}{25}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_afcaa39c5e8e4e872a4717ebfd8f25107}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_afcaa39c5e8e4e872a4717ebfd8f25107} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!maxPackageTemp@{maxPackageTemp}}
+\index{maxPackageTemp@{maxPackageTemp}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{maxPackageTemp}{maxPackageTemp}}
+{\footnotesize\ttfamily double Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+max\+Package\+Temp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00029}{29}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_af10a161f9876e43492576a570a6ce787}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_af10a161f9876e43492576a570a6ce787} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!packageTemp@{packageTemp}}
+\index{packageTemp@{packageTemp}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{packageTemp}{packageTemp}}
+{\footnotesize\ttfamily double Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+package\+Temp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00027}{27}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a2b0e08ba347c7d7c000161aca4667e21}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a2b0e08ba347c7d7c000161aca4667e21} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!packageVoltage@{packageVoltage}}
+\index{packageVoltage@{packageVoltage}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{packageVoltage}{packageVoltage}}
+{\footnotesize\ttfamily double Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+package\+Voltage\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00028}{28}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a793fb77668b979e959218ca83ae75b28}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a793fb77668b979e959218ca83ae75b28} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!temperatures@{temperatures}}
+\index{temperatures@{temperatures}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{temperatures}{temperatures}}
+{\footnotesize\ttfamily List$<$double$>$ Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+temperatures = new List$<$double$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+物理コアの番号順に並んでいる　温度 
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00021}{21}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a3aac582d19cb024636262729ec832c92}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a3aac582d19cb024636262729ec832c92} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!totalUsage@{totalUsage}}
+\index{totalUsage@{totalUsage}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{totalUsage}{totalUsage}}
+{\footnotesize\ttfamily double Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+total\+Usage\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00026}{26}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_aa685e108f88abffaed7afd4c0138c83f}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_aa685e108f88abffaed7afd4c0138c83f} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!voltages@{voltages}}
+\index{voltages@{voltages}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{voltages}{voltages}}
+{\footnotesize\ttfamily List$<$double$>$ Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+voltages = new List$<$double$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+　物理コアの番号順に並んでいる電圧 
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00017}{17}} 行目に定義があります。
+
+
+
+\doxysubsection{プロパティ詳解}
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a9acdb973ce2da9f7da4020b586ba38b8}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a9acdb973ce2da9f7da4020b586ba38b8} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!AllCoreProcess@{AllCoreProcess}}
+\index{AllCoreProcess@{AllCoreProcess}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{AllCoreProcess}{AllCoreProcess}}
+{\footnotesize\ttfamily List$<$double$>$ Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+All\+Core\+Process\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00033}{33}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a72749ee12596602c00e32ebfb8b08926}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a72749ee12596602c00e32ebfb8b08926} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!MaxPackageTemp@{MaxPackageTemp}}
+\index{MaxPackageTemp@{MaxPackageTemp}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{MaxPackageTemp}{MaxPackageTemp}}
+{\footnotesize\ttfamily double Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+Max\+Package\+Temp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00037}{37}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_ac1841b3949adf5483975c7ef99ce494e}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_ac1841b3949adf5483975c7ef99ce494e} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!PackageTemp@{PackageTemp}}
+\index{PackageTemp@{PackageTemp}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{PackageTemp}{PackageTemp}}
+{\footnotesize\ttfamily double Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+Package\+Temp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00034}{34}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a97c487b462dc4b483affe397c062c56c}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a97c487b462dc4b483affe397c062c56c} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!PackageVoltage@{PackageVoltage}}
+\index{PackageVoltage@{PackageVoltage}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{PackageVoltage}{PackageVoltage}}
+{\footnotesize\ttfamily double Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+Package\+Voltage\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00035}{35}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_ac455c65cf9915220c6dd705e49922598}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_ac455c65cf9915220c6dd705e49922598} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!Temperatures@{Temperatures}}
+\index{Temperatures@{Temperatures}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{Temperatures}{Temperatures}}
+{\footnotesize\ttfamily List$<$double$>$ Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+Temperatures\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00032}{32}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a3ea3a17d7b326c3d23b6ff5c472cc3b4}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a3ea3a17d7b326c3d23b6ff5c472cc3b4} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!TotalCpuUsage@{TotalCpuUsage}}
+\index{TotalCpuUsage@{TotalCpuUsage}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{TotalCpuUsage}{TotalCpuUsage}}
+{\footnotesize\ttfamily double Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+Total\+Cpu\+Usage\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00036}{36}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a88b7804cc71d0ae2bd88072c4da51bb2}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_cpu_a88b7804cc71d0ae2bd88072c4da51bb2} 
+\index{PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}!Voltages@{Voltages}}
+\index{Voltages@{Voltages}!PcInfoSerchProject.PcStatus.Modules.Property.Cpu@{PcInfoSerchProject.PcStatus.Modules.Property.Cpu}}
+\doxysubsubsection{\texorpdfstring{Voltages}{Voltages}}
+{\footnotesize\ttfamily List$<$double$>$ Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Property.\+Cpu.\+Voltages\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+ \mbox{\hyperlink{_cpu_8cs_source}{Cpu.\+cs}} の \mbox{\hyperlink{_cpu_8cs_source_l00031}{31}} 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Pc\+Status/\+Modules/\+Property/\mbox{\hyperlink{_cpu_8cs}{Cpu.\+cs}}\end{DoxyCompactItemize}

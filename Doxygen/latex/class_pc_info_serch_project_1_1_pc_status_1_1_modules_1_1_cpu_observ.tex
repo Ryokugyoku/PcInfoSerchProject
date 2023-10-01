@@ -1,0 +1,171 @@
+\doxysection{Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Cpu\+Observ クラス}
+\hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ}{}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ}\index{PcInfoSerchProject.PcStatus.Modules.CpuObserv@{PcInfoSerchProject.PcStatus.Modules.CpuObserv}}
+
+
+Cpu監視用クラス  
+
+
+
+
+Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Cpu\+Observ 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_a4220c48bd3021cda5904f74420331fe4}{Snap\+Shot}} (Object date)
+\begin{DoxyCompactList}\small\item\em CPU状態のスナップショットを取得し、グローバルオブジェクトに格納する \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_wmic_cpu_property}{Wmic\+Cpu\+Property}} $>$ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_aed9d485596b3ce34d78018f1ed350d15}{get\+Cpu\+Usage\+Per\+Process}} ()
+\begin{DoxyCompactList}\small\item\em プロセスごとの\+CPU使用率を取得する。\+\_\+\+Totalに全体の使用率も格納されている \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_wmic_cpu_property}{Wmic\+Cpu\+Property}} \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_a31a3bf5b3463241436a52898ddd9edba}{set\+Cpu\+Property}} (\mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_wmic_cpu_property}{Wmic\+Cpu\+Property}} cpu\+Property, String title, String value)
+\begin{DoxyCompactList}\small\item\em 値を変換して\+Wmic\+Cpu\+Propertyに格納する \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_aa3c6829e210871df5b892d0f660b337d}{get\+Process\+Rslt}} (int flg)
+\begin{DoxyCompactList}\small\item\em 引数をもとに\+CMDコマンドを実行するためのプロセスを返す \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Cpu監視用クラス 
+
+ \mbox{\hyperlink{_cpu_observ_8cs_source}{Cpu\+Observ.\+cs}} の \mbox{\hyperlink{_cpu_observ_8cs_source_l00014}{14}} 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_aed9d485596b3ce34d78018f1ed350d15}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_aed9d485596b3ce34d78018f1ed350d15} 
+\index{PcInfoSerchProject.PcStatus.Modules.CpuObserv@{PcInfoSerchProject.PcStatus.Modules.CpuObserv}!getCpuUsagePerProcess@{getCpuUsagePerProcess}}
+\index{getCpuUsagePerProcess@{getCpuUsagePerProcess}!PcInfoSerchProject.PcStatus.Modules.CpuObserv@{PcInfoSerchProject.PcStatus.Modules.CpuObserv}}
+\doxysubsubsection{\texorpdfstring{getCpuUsagePerProcess()}{getCpuUsagePerProcess()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_wmic_cpu_property}{Wmic\+Cpu\+Property}} $>$ Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Cpu\+Observ.\+get\+Cpu\+Usage\+Per\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+プロセスごとの\+CPU使用率を取得する。\+\_\+\+Totalに全体の使用率も格納されている 
+
+\begin{DoxyReturn}{戻り値}
+
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{_cpu_observ_8cs_source}{Cpu\+Observ.\+cs}} の \mbox{\hyperlink{_cpu_observ_8cs_source_l00035}{35}} 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_aed9d485596b3ce34d78018f1ed350d15_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_aed9d485596b3ce34d78018f1ed350d15_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_aa3c6829e210871df5b892d0f660b337d}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_aa3c6829e210871df5b892d0f660b337d} 
+\index{PcInfoSerchProject.PcStatus.Modules.CpuObserv@{PcInfoSerchProject.PcStatus.Modules.CpuObserv}!getProcessRslt@{getProcessRslt}}
+\index{getProcessRslt@{getProcessRslt}!PcInfoSerchProject.PcStatus.Modules.CpuObserv@{PcInfoSerchProject.PcStatus.Modules.CpuObserv}}
+\doxysubsubsection{\texorpdfstring{getProcessRslt()}{getProcessRslt()}}
+{\footnotesize\ttfamily String Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Cpu\+Observ.\+get\+Process\+Rslt (\begin{DoxyParamCaption}\item[{int}]{flg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+引数をもとに\+CMDコマンドを実行するためのプロセスを返す 
+
+
+\begin{DoxyParams}{引数}
+{\em flg} & 引数の値によって下記のような\+CMDコマンドの実行結果を返す 0 = Cpu使用率　※各プロセス\+ID事 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+引数に応じて\+Processを返す 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{_cpu_observ_8cs_source}{Cpu\+Observ.\+cs}} の \mbox{\hyperlink{_cpu_observ_8cs_source_l00136}{136}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_aa3c6829e210871df5b892d0f660b337d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_a31a3bf5b3463241436a52898ddd9edba}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_a31a3bf5b3463241436a52898ddd9edba} 
+\index{PcInfoSerchProject.PcStatus.Modules.CpuObserv@{PcInfoSerchProject.PcStatus.Modules.CpuObserv}!setCpuProperty@{setCpuProperty}}
+\index{setCpuProperty@{setCpuProperty}!PcInfoSerchProject.PcStatus.Modules.CpuObserv@{PcInfoSerchProject.PcStatus.Modules.CpuObserv}}
+\doxysubsubsection{\texorpdfstring{setCpuProperty()}{setCpuProperty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_wmic_cpu_property}{Wmic\+Cpu\+Property}} Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Cpu\+Observ.\+set\+Cpu\+Property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_property_1_1_wmic_cpu_property}{Wmic\+Cpu\+Property}}}]{cpu\+Property,  }\item[{String}]{title,  }\item[{String}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+値を変換して\+Wmic\+Cpu\+Propertyに格納する 
+
+
+\begin{DoxyParams}{引数}
+{\em cpu\+Property} & 値を格納するためのオブジェクト\\
+\hline
+{\em title} & プロセス名\\
+\hline
+{\em value} & 値\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+引数に設定された\+Valueとを設定したオブジェクトを返す
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{_cpu_observ_8cs_source}{Cpu\+Observ.\+cs}} の \mbox{\hyperlink{_cpu_observ_8cs_source_l00103}{103}} 行目に定義があります。
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_a31a3bf5b3463241436a52898ddd9edba_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_a4220c48bd3021cda5904f74420331fe4}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_a4220c48bd3021cda5904f74420331fe4} 
+\index{PcInfoSerchProject.PcStatus.Modules.CpuObserv@{PcInfoSerchProject.PcStatus.Modules.CpuObserv}!SnapShot@{SnapShot}}
+\index{SnapShot@{SnapShot}!PcInfoSerchProject.PcStatus.Modules.CpuObserv@{PcInfoSerchProject.PcStatus.Modules.CpuObserv}}
+\doxysubsubsection{\texorpdfstring{SnapShot()}{SnapShot()}}
+{\footnotesize\ttfamily void Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Cpu\+Observ.\+Snap\+Shot (\begin{DoxyParamCaption}\item[{Object}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+CPU状態のスナップショットを取得し、グローバルオブジェクトに格納する 
+
+
+\begin{DoxyParams}{引数}
+{\em date} & キーとなる実行時間 \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{_cpu_observ_8cs_source}{Cpu\+Observ.\+cs}} の \mbox{\hyperlink{_cpu_observ_8cs_source_l00022}{22}} 行目に定義があります。
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_a4220c48bd3021cda5904f74420331fe4_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_a4220c48bd3021cda5904f74420331fe4_icgraph}
+\end{center}
+\end{figure}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Pc\+Status/\+Modules/\mbox{\hyperlink{_cpu_observ_8cs}{Cpu\+Observ.\+cs}}\end{DoxyCompactItemize}

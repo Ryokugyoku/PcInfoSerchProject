@@ -9,7 +9,7 @@ namespace PcInfoSerchProject.PcStatus.Modules.Property
     /// <summary>
     ///     HWMonitorから受け取ったCPU情報を格納するための構造
     /// </summary>
-    internal class Cpu
+    public class Cpu
     {
         /// <summary>
         /// 　物理コアの番号順に並んでいる電圧
@@ -38,7 +38,7 @@ namespace PcInfoSerchProject.PcStatus.Modules.Property
 
     }
 
-    internal class WmicCpuProperty
+    class WmicCpuProperty
     {
         private int idProcess;
 

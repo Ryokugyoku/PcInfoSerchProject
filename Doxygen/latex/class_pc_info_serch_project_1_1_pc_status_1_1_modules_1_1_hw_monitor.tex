@@ -1,0 +1,158 @@
+\doxysection{Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Hw\+Monitor クラス}
+\hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor}{}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor}\index{PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}}
+
+
+Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Hw\+Monitor 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_a0e8b69ad254a0ed59612fa9661235507}{Hw\+Monitor}} (Computer c, Date\+Time \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_a695e8656f882bf23c7e9ec25ab591091}{date}})
+\begin{DoxyCompactList}\small\item\em PCのデータを収集するための設定を行う 設定値 Is\+Cpu\+Enabled \+: Cpuの監視をする Is\+Gpu\+Enabled \+: Gpuの監視をする Is\+Memory\+Enabled \+: Memoryの監視をする Is\+Motherboard\+Enabled \+: Motherboardの監視をする Is\+Storage\+Enabled \+: HDD/\+SSD の監視をする サンプルコード \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_ab3ebdfe9e66498e6571ca9ba9d8014af}{Start\+Observ}} (Computer c)
+\begin{DoxyCompactList}\small\item\em 各ハードウェアタイプごとに処理を適切に割り振るためのメソッド \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_ad7258006828005c4660d839485c46872}{Cpu}} (IHardware h)
+\begin{DoxyCompactList}\small\item\em Cpu専用の情報を収集するメソッド \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ double $>$ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_ab37f991ddab656682c5d0df3523e38cf}{Pc\+Voltages}} = new List$<$double$>$()
+\item 
+List$<$ double $>$ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_a5cf979b1b7ed0044bfc9a6d8f27c9f09}{Pc\+Temperatures}} = new List$<$double$>$()
+\item 
+List$<$ double $>$ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_a2f6447111d738741c910f6c912dda51b}{Pc\+All\+Core\+Process}} = new List$<$double$>$()
+\item 
+Date\+Time \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_a695e8656f882bf23c7e9ec25ab591091}{date}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+
+
+ \mbox{\hyperlink{_hw_monitor_8cs_source}{Hw\+Monitor.\+cs}} の \mbox{\hyperlink{_hw_monitor_8cs_source_l00011}{11}} 行目に定義があります。
+
+
+
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_a0e8b69ad254a0ed59612fa9661235507}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_a0e8b69ad254a0ed59612fa9661235507} 
+\index{PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}!HwMonitor@{HwMonitor}}
+\index{HwMonitor@{HwMonitor}!PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}}
+\doxysubsubsection{\texorpdfstring{HwMonitor()}{HwMonitor()}}
+{\footnotesize\ttfamily Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Hw\+Monitor.\+Hw\+Monitor (\begin{DoxyParamCaption}\item[{Computer}]{c,  }\item[{Date\+Time}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+PCのデータを収集するための設定を行う 設定値 Is\+Cpu\+Enabled \+: Cpuの監視をする Is\+Gpu\+Enabled \+: Gpuの監視をする Is\+Memory\+Enabled \+: Memoryの監視をする Is\+Motherboard\+Enabled \+: Motherboardの監視をする Is\+Storage\+Enabled \+: HDD/\+SSD の監視をする サンプルコード 
+
+{\ttfamily  Computer c = new Computer()\{ Is\+Cpu\+Enabled = true, Is\+Gpu\+Enabled = true, Is\+Memory\+Enabled = true, Is\+Motherboard\+Enabled = true, Is\+Network\+Enabled = true, Is\+Storage\+Enabled = true \}}
+
+{\ttfamily  Hw\+Monitor monitor = new Hw\+Monitor(c); } 
+
+
+\begin{DoxyParams}{引数}
+{\em c} & 収集したい\+Pc情報を設定する\\
+\hline
+{\em date} & 実行日時\\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{_hw_monitor_8cs_source}{Hw\+Monitor.\+cs}} の \mbox{\hyperlink{_hw_monitor_8cs_source_l00045}{45}} 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_ad7258006828005c4660d839485c46872}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_ad7258006828005c4660d839485c46872} 
+\index{PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}!Cpu@{Cpu}}
+\index{Cpu@{Cpu}!PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}}
+\doxysubsubsection{\texorpdfstring{Cpu()}{Cpu()}}
+{\footnotesize\ttfamily void Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Hw\+Monitor.\+Cpu (\begin{DoxyParamCaption}\item[{IHardware}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Cpu専用の情報を収集するメソッド 
+
+
+\begin{DoxyParams}{引数}
+{\em h} & \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{_hw_monitor_8cs_source}{Hw\+Monitor.\+cs}} の \mbox{\hyperlink{_hw_monitor_8cs_source_l00115}{115}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_ab3ebdfe9e66498e6571ca9ba9d8014af}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_ab3ebdfe9e66498e6571ca9ba9d8014af} 
+\index{PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}!StartObserv@{StartObserv}}
+\index{StartObserv@{StartObserv}!PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}}
+\doxysubsubsection{\texorpdfstring{StartObserv()}{StartObserv()}}
+{\footnotesize\ttfamily void Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Hw\+Monitor.\+Start\+Observ (\begin{DoxyParamCaption}\item[{Computer}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+各ハードウェアタイプごとに処理を適切に割り振るためのメソッド 
+
+
+\begin{DoxyParams}{引数}
+{\em c} & Computer\\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{_hw_monitor_8cs_source}{Hw\+Monitor.\+cs}} の \mbox{\hyperlink{_hw_monitor_8cs_source_l00078}{78}} 行目に定義があります。
+
+
+
+\doxysubsection{メンバ詳解}
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_a695e8656f882bf23c7e9ec25ab591091}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_a695e8656f882bf23c7e9ec25ab591091} 
+\index{PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}!date@{date}}
+\index{date@{date}!PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}}
+\doxysubsubsection{\texorpdfstring{date}{date}}
+{\footnotesize\ttfamily Date\+Time Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Hw\+Monitor.\+date\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{_hw_monitor_8cs_source}{Hw\+Monitor.\+cs}} の \mbox{\hyperlink{_hw_monitor_8cs_source_l00017}{17}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_a2f6447111d738741c910f6c912dda51b}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_a2f6447111d738741c910f6c912dda51b} 
+\index{PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}!PcAllCoreProcess@{PcAllCoreProcess}}
+\index{PcAllCoreProcess@{PcAllCoreProcess}!PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}}
+\doxysubsubsection{\texorpdfstring{PcAllCoreProcess}{PcAllCoreProcess}}
+{\footnotesize\ttfamily List$<$double$>$ Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Hw\+Monitor.\+Pc\+All\+Core\+Process = new List$<$double$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{_hw_monitor_8cs_source}{Hw\+Monitor.\+cs}} の \mbox{\hyperlink{_hw_monitor_8cs_source_l00016}{16}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_a5cf979b1b7ed0044bfc9a6d8f27c9f09}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_a5cf979b1b7ed0044bfc9a6d8f27c9f09} 
+\index{PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}!PcTemperatures@{PcTemperatures}}
+\index{PcTemperatures@{PcTemperatures}!PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}}
+\doxysubsubsection{\texorpdfstring{PcTemperatures}{PcTemperatures}}
+{\footnotesize\ttfamily List$<$double$>$ Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Hw\+Monitor.\+Pc\+Temperatures = new List$<$double$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{_hw_monitor_8cs_source}{Hw\+Monitor.\+cs}} の \mbox{\hyperlink{_hw_monitor_8cs_source_l00014}{14}} 行目に定義があります。
+
+\Hypertarget{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_ab37f991ddab656682c5d0df3523e38cf}\label{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_hw_monitor_ab37f991ddab656682c5d0df3523e38cf} 
+\index{PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}!PcVoltages@{PcVoltages}}
+\index{PcVoltages@{PcVoltages}!PcInfoSerchProject.PcStatus.Modules.HwMonitor@{PcInfoSerchProject.PcStatus.Modules.HwMonitor}}
+\doxysubsubsection{\texorpdfstring{PcVoltages}{PcVoltages}}
+{\footnotesize\ttfamily List$<$double$>$ Pc\+Info\+Serch\+Project.\+Pc\+Status.\+Modules.\+Hw\+Monitor.\+Pc\+Voltages = new List$<$double$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{_hw_monitor_8cs_source}{Hw\+Monitor.\+cs}} の \mbox{\hyperlink{_hw_monitor_8cs_source_l00013}{13}} 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Pc\+Status/\+Modules/\mbox{\hyperlink{_hw_monitor_8cs}{Hw\+Monitor.\+cs}}\end{DoxyCompactItemize}

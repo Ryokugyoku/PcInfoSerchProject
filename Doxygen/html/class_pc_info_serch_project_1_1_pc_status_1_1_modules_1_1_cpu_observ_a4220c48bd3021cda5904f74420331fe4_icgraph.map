@@ -1,0 +1,9 @@
+<map id="PcInfoSerchProject.PcStatus.Modules.CpuObserv.SnapShot" name="PcInfoSerchProject.PcStatus.Modules.CpuObserv.SnapShot">
+<area shape="rect" id="Node000001" title="CPU状態のスナップショットを取得し、グローバルオブジェクトに格納する" alt="" coords="430,39,628,81"/>
+<area shape="rect" id="Node000002" href="$class_pc_info_serch_project_1_1_start_observ.html#ad5e7e83023c417cc243c20fa621ef35c" title=" " alt="" coords="218,39,382,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="414,63,382,63,382,57,414,57"/>
+<area shape="rect" id="Node000003" href="$class_pc_info_serch_project_1_1_start_observ.html#a7b9639f57cd8089e7b0fc4eafdb220b2" title="スナップショット開始　1秒間隔" alt="" coords="5,5,170,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="202,47,170,42,170,37,203,42"/>
+<area shape="rect" id="Node000004" href="$class_pc_info_serch_project_1_1_start_observ.html#a67a719dfb705878c91292a8761b455c8" title="スナップショット開始　" alt="" coords="5,72,170,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="203,78,170,83,170,78,202,73"/>
+</map>

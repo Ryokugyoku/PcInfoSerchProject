@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PcInfoSerchProject.PcStatus.Modules.Property
 {
-    internal class MotherBoard
+    class MotherBoard
     {
     }
 }

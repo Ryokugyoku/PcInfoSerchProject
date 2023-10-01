@@ -1,0 +1,33 @@
+\doxysection{Start\+Observ.\+cs}
+\hypertarget{_start_observ_8cs_source}{}\label{_start_observ_8cs_source}\mbox{\hyperlink{_start_observ_8cs}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_pc_info_serch_project_1_1_pc_status}{PcInfoSerchProject.PcStatus}};}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_pc_info_serch_project_1_1_pc_status_1_1_modules}{PcInfoSerchProject.PcStatus.Modules}};}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Threading;}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_pc_info_serch_project}{PcInfoSerchProject}}}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00010}\mbox{\hyperlink{class_pc_info_serch_project_1_1_start_observ}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pc_info_serch_project_1_1_start_observ}{StartObserv}}\ }
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00015}\mbox{\hyperlink{class_pc_info_serch_project_1_1_start_observ_a7b9639f57cd8089e7b0fc4eafdb220b2}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_pc_info_serch_project_1_1_start_observ_a7b9639f57cd8089e7b0fc4eafdb220b2}{StartObserv}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ Thread\ t\ =\ \textcolor{keyword}{new}\ Thread(\textcolor{keyword}{new}\ ParameterizedThreadStart(\mbox{\hyperlink{class_pc_info_serch_project_1_1_start_observ_ad5e7e83023c417cc243c20fa621ef35c}{SnapShotThread}}));}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ t.Start(1);}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00030}\mbox{\hyperlink{class_pc_info_serch_project_1_1_start_observ_a67a719dfb705878c91292a8761b455c8}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_pc_info_serch_project_1_1_start_observ_a67a719dfb705878c91292a8761b455c8}{StartObserv}}(\textcolor{keywordtype}{int}\ sec)}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ Thread\ t\ =\ \textcolor{keyword}{new}\ Thread(\textcolor{keyword}{new}\ ParameterizedThreadStart(\mbox{\hyperlink{class_pc_info_serch_project_1_1_start_observ_ad5e7e83023c417cc243c20fa621ef35c}{SnapShotThread}}));}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ t.Start(sec);}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00036}\mbox{\hyperlink{class_pc_info_serch_project_1_1_start_observ_ad5e7e83023c417cc243c20fa621ef35c}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pc_info_serch_project_1_1_start_observ_ad5e7e83023c417cc243c20fa621ef35c}{SnapShotThread}}(Object\ sec)\ \{\ }
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ snapSec\ =\ (int)sec;}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ DateTime\ date\ =\ DateTime.Now;}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ}{CpuObserv}}\ cpu\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ}{CpuObserv}}();}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ Thread\ cpuObserv\ =\ \textcolor{keyword}{new}\ Thread(\textcolor{keyword}{new}\ ParameterizedThreadStart(cpu.\mbox{\hyperlink{class_pc_info_serch_project_1_1_pc_status_1_1_modules_1_1_cpu_observ_a4220c48bd3021cda5904f74420331fe4}{SnapShot}}));}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ cpuObserv.Start(date);}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_start_observ_8cs_source_l00044}00044\ \}}
+
+\end{DoxyCode}

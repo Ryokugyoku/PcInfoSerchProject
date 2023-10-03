@@ -21,14 +21,15 @@ namespace PcInfoSerchProject
 
         /// <summary>
         ///     スナップショット開始　
-        /// </summary>
-        /// <param name="sec">スナップショット保存間隔：秒数</param>
-        /// <example>
+        ///     
+        ///<example>
+        /// １０秒間隔でスナップショットを収集するとき
         ///     <code>
-        ///         //１０秒間隔でスナップショットを収集するとき
         ///         StartObserv obSrv = new StartObserv(10);
         ///     </code>
         /// </example>
+        /// </summary>
+        /// <param name="sec">スナップショット保存間隔：秒数</param>
         public StartObserv(int sec)
         {
             Thread t = new Thread(new ParameterizedThreadStart(SnapShotThread));

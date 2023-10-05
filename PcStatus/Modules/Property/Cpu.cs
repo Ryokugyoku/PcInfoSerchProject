@@ -82,7 +82,7 @@ namespace PcInfoSerchProject.PcStatus.Modules.Property
 
     }
 
-    class WmicCpuProperty
+    public class WmicCpuProperty
     {
         private int idProcess;
 

@@ -1,10 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.ValueGeneration.Internal;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-namespace PcInfoSerchProject.PcStatus.Modules.Property
+﻿namespace PcInfoSerchProject.PcStatus.Modules.Property
 {
     /// <summary>
     ///     HWMonitorから受け取ったCPU情報を格納するための構造

@@ -5,3 +5,10 @@ C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProje
 C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.AssemblyInfoInputs.cache
 C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.AssemblyInfo.cs
 C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.csproj.CoreCompileInputs.cache
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\bin\Debug\net6.0\PcInfoSerchProject.deps.json
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\bin\Debug\net6.0\PcInfoSerchProject.dll
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\bin\Debug\net6.0\PcInfoSerchProject.pdb
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.dll
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\refint\PcInfoSerchProject.dll
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.pdb
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\ref\PcInfoSerchProject.dll

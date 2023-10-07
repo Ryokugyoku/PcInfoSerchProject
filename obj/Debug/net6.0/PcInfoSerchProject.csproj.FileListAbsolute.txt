@@ -1,0 +1,7 @@
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.csproj.AssemblyReference.cache
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.Properties.Resources.resources
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.csproj.GenerateResource.cache
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.AssemblyInfoInputs.cache
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.AssemblyInfo.cs
+C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.csproj.CoreCompileInputs.cache

@@ -12,6 +12,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="C:\Users\Ryoku\source\repos\PcInfoSerchProject\bin\Debug\net6.0\PcInfoSerchProject.dll" target="lib\net6.0\PcInfoSerchProject.dll" />
+    <file src="C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\bin\Debug\net6.0\PcInfoSerchProject.dll" target="lib\net6.0\PcInfoSerchProject.dll" />
   </files>
 </package>

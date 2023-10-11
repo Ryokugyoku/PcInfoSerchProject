@@ -6,7 +6,7 @@ namespace PcInfoSerchProject
     ///    主にPCで収集したデータを一時的に保存する
     /// </summary>
     
-    static class GlobalObject
+    public static class GlobalObject
     {
         /// <summary>
         ///     最新の監視情報を持っている

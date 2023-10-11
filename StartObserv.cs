@@ -36,7 +36,14 @@ namespace PcInfoSerchProject
             t.Start(sec);
         }
 
-        private void SnapShotThread(Object sec) { 
+        /// <summary>
+        /// SnapShot用のメソッド
+        /// </summary>
+        /// <param name="sec">
+        ///     引数がNullの時デフォルトで1秒が設定される
+        /// </param>
+        private void SnapShotThread(Object? sec) {
+            sec = sec ?? 1;
             int snapSec = (int)sec;
             for (;true;) {
                 Thread.Sleep(snapSec*1000);
@@ -45,12 +52,6 @@ namespace PcInfoSerchProject
                 Thread cpuObserv = new Thread(new ParameterizedThreadStart(cpu.SnapShot));
                 cpuObserv.Start(date);
             }
-
-           // cpu.SnapShot(date);
-        }
-
-        public Cpu getNowCpu() {
-            return GlobalObject.NowCpuData;
         }
     }
 }

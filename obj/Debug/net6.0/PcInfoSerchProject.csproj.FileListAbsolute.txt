@@ -12,3 +12,17 @@ C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProje
 C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\refint\PcInfoSerchProject.dll
 C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.pdb
 C:\Users\Ryoku\source\repos\PcInfoSerchProject\obj\Debug\net6.0\ref\PcInfoSerchProject.dll
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\bin\Debug\net6.0\PcInfoSerchProject.deps.json
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\bin\Debug\net6.0\PcInfoSerchProject.dll
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\bin\Debug\net6.0\PcInfoSerchProject.pdb
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.csproj.AssemblyReference.cache
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.Properties.Resources.resources
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.csproj.GenerateResource.cache
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.AssemblyInfoInputs.cache
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.AssemblyInfo.cs
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.csproj.CoreCompileInputs.cache
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.dll
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\obj\Debug\net6.0\refint\PcInfoSerchProject.dll
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\obj\Debug\net6.0\PcInfoSerchProject.pdb
+C:\Users\ItsukiRyoku\source\repos\Ryokugyoku\PcInfoSerchProject\obj\Debug\net6.0\ref\PcInfoSerchProject.dll

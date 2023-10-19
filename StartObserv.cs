@@ -1,7 +1,4 @@
-﻿using PcInfoSerchProject.PcStatus;
-using PcInfoSerchProject.PcStatus.Modules;
-using PcInfoSerchProject.PcStatus.Modules.Property;
-using System.Threading;
+﻿using PcInfoSerchProject.PcStatus.Modules;
 
 namespace PcInfoSerchProject
 {
@@ -46,11 +43,14 @@ namespace PcInfoSerchProject
             sec = sec ?? 1;
             int snapSec = (int)sec;
             for (;true;) {
-                Thread.Sleep(snapSec*1000);
+                Thread.Sleep(snapSec*500);
                 DateTime date = DateTime.Now;
                 CpuObserv cpu = new CpuObserv();
+                GpuObserv gpu = new GpuObserv();
                 Thread cpuObserv = new Thread(new ParameterizedThreadStart(cpu.SnapShot));
+                Thread gpuObserv = new Thread(new ParameterizedThreadStart(gpu.SnapShot));
                 cpuObserv.Start(date);
+                gpuObserv.Start(date);
             }
         }
     }

@@ -1,11 +1,11 @@
 {
   "runtimeTarget": {
-    "name": ".NETCoreApp,Version=v6.0",
+    "name": ".NETCoreApp,Version=v7.0",
     "signature": ""
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v6.0": {
+    ".NETCoreApp,Version=v7.0": {
       "PcInfoSerchProject/1.0.0": {
         "dependencies": {
           "LibreHardwareMonitorLib": "0.9.2"
@@ -32,7 +32,7 @@
           "System.Management": "7.0.0"
         },
         "runtime": {
-          "lib/net6.0/LibreHardwareMonitorLib.dll": {
+          "lib/net7.0/LibreHardwareMonitorLib.dll": {
             "assemblyVersion": "0.9.2.0",
             "fileVersion": "0.9.2.0"
           }
@@ -203,7 +203,7 @@
       },
       "System.CodeDom/7.0.0": {
         "runtime": {
-          "lib/net6.0/System.CodeDom.dll": {
+          "lib/net7.0/System.CodeDom.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51805"
           }
@@ -220,19 +220,19 @@
           "runtime.native.System.IO.Ports": "7.0.0"
         },
         "runtime": {
-          "lib/net6.0/System.IO.Ports.dll": {
+          "lib/net7.0/System.IO.Ports.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51805"
           }
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/net6.0/System.IO.Ports.dll": {
+          "runtimes/unix/lib/net7.0/System.IO.Ports.dll": {
             "rid": "unix",
             "assetType": "runtime",
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51805"
           },
-          "runtimes/win/lib/net6.0/System.IO.Ports.dll": {
+          "runtimes/win/lib/net7.0/System.IO.Ports.dll": {
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "7.0.0.0",
@@ -245,13 +245,13 @@
           "System.CodeDom": "7.0.0"
         },
         "runtime": {
-          "lib/net6.0/System.Management.dll": {
+          "lib/net7.0/System.Management.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "7.0.22.51805"
           }
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net6.0/System.Management.dll": {
+          "runtimes/win/lib/net7.0/System.Management.dll": {
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "4.0.0.0",

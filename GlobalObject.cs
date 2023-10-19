@@ -9,17 +9,34 @@ namespace PcInfoSerchProject
     public static class GlobalObject
     {
         /// <summary>
+        ///     CPU名が格納されている
+        /// </summary>
+        public static String CpuName { get; set; } = "-";
+
+        public static String GpuName { get; set; } = "-";
+
+        /// <summary>
+        ///  最新の監視情報を持っている。
+        /// </summary>
+        public static Gpu NowGpuData { get; set; } = new Gpu();
+
+        public static IDictionary<DateTime, Gpu> GpuMap { get; set; }= new Dictionary<DateTime, Gpu>();
+
+        /// <summary>
         ///     最新の監視情報を持っている
         /// </summary>
         private static Cpu nowCpuData = new();
+
         /// <summary>
         ///  最新のプロセスごとの使用率を格納している
         /// </summary>
         private static List<WmicCpuProperty> nowWmicData = new();
+
         /// <summary>
         ///    キー　実行日時　Value Cpu
         /// </summary>
         private static IDictionary<DateTime, Cpu> cpuMap = new Dictionary<DateTime, Cpu>();
+
         /// <summary>
         ///  キー　実行日時 Value WmicCpuProperty /サービスごとのCPU利用率 
         /// </summary>
@@ -29,6 +46,7 @@ namespace PcInfoSerchProject
         ///     キー日時　Value:Cpu
         /// </summary>
         public static IDictionary<DateTime, Cpu> CpuMap { get { return cpuMap; } set { cpuMap = value; } }
+
         /// <summary>
         ///  キー日時 value : WmicCpuProperty(プロセスごとの使用率)
         /// </summary>

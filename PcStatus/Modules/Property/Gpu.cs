@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace PcInfoSerchProject.PcStatus.Modules.Property
 {
-    class Gpu
+    /// <summary>
+    ///     
+    /// </summary>
+    public class Gpu
     {
+        public String GpuName { get; set; } = "";
+
+        public double PackageTemp {  get; set; }
+
+        public double MaxPackageTemp { get; set; }
+
+        public double TotalGpuUsage {  get; set; }
+
+        public double PackageVoltage {  get; set; }
     }
 }

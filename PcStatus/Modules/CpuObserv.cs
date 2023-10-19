@@ -19,7 +19,8 @@ namespace PcInfoSerchProject.PcStatus.Modules
         /// <param name="date">
         ///    キーとなる実行時間
         /// </param>
-        public void SnapShot(Object date) {
+        public void SnapShot(Object? date) {
+            date = date ?? DateTime.Now;
             List<WmicCpuProperty> cpuPropertyList = getCpuUsagePerProcess();
             GlobalObject.CpuUsagePerProcessMap.Add((DateTime)date, cpuPropertyList);
             GlobalObject.NowWmicData = cpuPropertyList;

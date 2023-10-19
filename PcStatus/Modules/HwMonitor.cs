@@ -1,19 +1,14 @@
 ﻿using LibreHardwareMonitor.Hardware;
 using PcInfoSerchProject.PcStatus.Modules.Property;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PcInfoSerchProject.PcStatus.Modules
 {
+    /// <summary>
+    ///     ハードウェア情報収集用メソッド
+    ///     複数のスレッドから同時に呼び出されることを想定して記述すること
+    /// </summary>
     class HwMonitor
     {
-        private List<double> PcVoltages = new List<double>();
-        private List<double> PcTemperatures = new List<double>();
-        //論理プロセッサーの使用率
-        private List<double> PcAllCoreProcess = new List<double>();
         DateTime date;
         /// <summary>
         /// PCのデータを収集するための設定を行う
@@ -85,8 +80,11 @@ namespace PcInfoSerchProject.PcStatus.Modules
                         break;
 
                     case HardwareType.GpuNvidia:
+                        GlobalObject.GpuName = hardware.Name;
+                        Gpu(hardware);
                         break;
                     case HardwareType.Cpu:
+                        GlobalObject.CpuName = hardware.Name;
                         Cpu(hardware);
                         break;
                     case HardwareType.SuperIO:
@@ -120,11 +118,7 @@ namespace PcInfoSerchProject.PcStatus.Modules
                 switch (sensor.SensorType)
                 {
                     case SensorType.Voltage:
-                        if (sensor.Name.Contains("#"))
-                        {
-                            PcVoltages.Add(sensor.Value.GetValueOrDefault());
-                        }
-                        else
+                        if (!sensor.Name.Contains("#"))
                         {
                             cpu.PackageVoltage = sensor.Value.GetValueOrDefault();
                         }
@@ -143,10 +137,6 @@ namespace PcInfoSerchProject.PcStatus.Modules
                         {
                             //核物理コアの観測された温度
                         }
-                        else if (sensor.Name.Contains("#"))
-                        {
-                            PcTemperatures.Add(sensor.Value.GetValueOrDefault());
-                        }
                         break;
                     case SensorType.Clock:
                         break;
@@ -157,15 +147,59 @@ namespace PcInfoSerchProject.PcStatus.Modules
                         {
                             cpu.TotalCpuUsage = sensor.Value.GetValueOrDefault();
                         }
-                        else
-                        {
-                            PcAllCoreProcess.Add(sensor.Value.GetValueOrDefault());
-                        }
                         break;
                 }
             }
             GlobalObject.CpuMap.Add(date,cpu);
             GlobalObject.NowCpuData = cpu;
+        }
+
+        /// <summary>
+        ///     GPU専用のメソッド
+        /// </summary>
+        /// <param name="h"></param>
+        private void Gpu(IHardware h)
+        {
+            Gpu gpu = new();
+            foreach (ISensor sensor in h.Sensors)
+            {
+                switch (sensor.SensorType)
+                {
+                    case SensorType.Voltage:
+                        if (!sensor.Name.Contains("#"))
+                        {
+                            gpu.PackageVoltage = sensor.Value.GetValueOrDefault();
+                        }
+                        break;
+                    case SensorType.Temperature:
+                        if (sensor.Name.Contains("Package"))
+                        {
+                            gpu.PackageTemp = sensor.Value.GetValueOrDefault();
+                        }
+                        else if (sensor.Name.Contains("Max"))
+                        {
+                            //Cpu全体の観測された温度
+                            gpu.MaxPackageTemp = sensor.Value.GetValueOrDefault();
+                        }
+                        else if (sensor.Name.Contains("TjMax"))
+                        {
+                            //核物理コアの観測された温度
+                        }
+                        break;
+                    case SensorType.Clock:
+                        break;
+                    case SensorType.Power:
+                        break;
+                    case SensorType.Load:
+                        if (sensor.Name.Contains("Total"))
+                        {
+                            gpu.TotalGpuUsage = sensor.Value.GetValueOrDefault();
+                        }
+                        break;
+                }
+            }
+            GlobalObject.GpuMap.Add(date, gpu);
+            GlobalObject.NowGpuData = gpu;
         }
     }
 

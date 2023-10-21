@@ -1,5 +1,6 @@
 ﻿using LibreHardwareMonitor.Hardware;
 using PcInfoSerchProject.PcStatus.Modules.Property;
+using System.Diagnostics;
 
 namespace PcInfoSerchProject.PcStatus.Modules
 {
@@ -45,21 +46,21 @@ namespace PcInfoSerchProject.PcStatus.Modules
 
             //foreach (IHardware hardware in c.Hardware)
             //{
-            //    Debug.Write("Hardware:"+ hardware.Name);
+            //    Debug.Write("Hardware:" + hardware.Name + " HardwareType : ");
 
             //    foreach (IHardware subhardware in hardware.SubHardware)
             //    {
-            //        Console.WriteLine("\tSubhardware: " + subhardware.Name);
+            //        Console.WriteLine("\tSubhardware: " + subhardware.Name );
 
             //        foreach (ISensor sensor in subhardware.Sensors)
             //        {
-            //            Debug.Write("\t\tSensor:"+sensor.Value + ", value:" + sensor.Name );
+            //            Debug.Write("\t\tSensor:" + sensor.Value + ", value:" + sensor.Name );
             //        }
             //    }
 
-            //    foreach (isensor sensor in hardware.sensors)
+            //    foreach (ISensor sensor in hardware.Sensors)
             //    {
-            //        debug.write("\t\tsensor:" + sensor.value + ", value:" + sensor.name);
+            //       Debug.Write("\t\tsensor:" + sensor.Value + ", value:" + sensor.Name );
             //    }
             //}
             StartObserv(c);
@@ -191,7 +192,7 @@ namespace PcInfoSerchProject.PcStatus.Modules
                     case SensorType.Power:
                         break;
                     case SensorType.Load:
-                        if (sensor.Name.Contains("Total"))
+                        if (sensor.Name.Contains("GPU Core"))
                         {
                             gpu.TotalGpuUsage = sensor.Value.GetValueOrDefault();
                         }

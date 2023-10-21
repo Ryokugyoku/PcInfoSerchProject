@@ -55,7 +55,7 @@ namespace PcInfoSerchProject
         /// <summary>
         ///     最新の監視情報を格納/取得する
         /// </summary>
-        public static Cpu NowCpuData { get { return nowCpuData;} set { nowCpuData = value; } } 
+        public static Cpu NowCpuData { get { lock (nowCpuData) { return nowCpuData; } } set { lock (nowCpuData){nowCpuData = value; } } } 
 
         /// <summary>
         ///     最新のプロセスごとの使用率を格納/取得する

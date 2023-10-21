@@ -43,14 +43,13 @@ namespace PcInfoSerchProject
             sec = sec ?? 1;
             int snapSec = (int)sec;
             for (;true;) {
-                Thread.Sleep(snapSec*500);
                 DateTime date = DateTime.Now;
                 CpuObserv cpu = new CpuObserv();
                 GpuObserv gpu = new GpuObserv();
-                Thread cpuObserv = new Thread(new ParameterizedThreadStart(cpu.SnapShot));
-                Thread gpuObserv = new Thread(new ParameterizedThreadStart(gpu.SnapShot));
-                cpuObserv.Start(date);
-                gpuObserv.Start(date);
+                Task t1 = Task.Factory.StartNew(() => { cpu.SnapShot(date); });
+                Task t2 = Task.Factory.StartNew(() => { gpu.SnapShot(date); });
+                
+                Task.WaitAll(t1,t2);
             }
         }
     }
